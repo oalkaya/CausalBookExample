@@ -531,15 +531,24 @@ def save_plot(
             linewidth=2,
         )
 
+        terms = [r"b", r"c_S S"]
+
+        if "age" in features:
+            terms.append(r"c_A A")
+
+        if "proteinuria" in features:
+            terms.append(r"c_P P")
+
+        yhat_formula = r"$\hat{Y} = " + " + ".join(terms) + r"$"
+
         ax.set_title(
-            r"Scatter: ground-truth $Y_i$ "
-            r"vs predicted $\hat{Y}_i$"
+            r"Scatter: ground-truth $Y$ "
+            r"vs predicted $\hat{Y}$"
             "\n"
             r"Line: perfect prediction "
             r"$\hat{Y}=Y$"
             "\n"
-            r"$\hat{Y}_i$ uses each individual's "
-            r"actual inputs",
+            + yhat_formula,
             fontsize=10,
         )
 
