@@ -1,21 +1,31 @@
-# Causal Inference Regression Example
+# Causal Inference Examples
 
-Small visualization and experimentation repo based on the sodium/blood-pressure example from Brady Neal's *Introduction to Causal Inference from a Machine Learning Perspective*.
+Small visualization and experimentation repo based on examples from Brady Neal's *Introduction to Causal Inference from a Machine Learning Perspective*.
 
-The code explores how different regression adjustment choices affect prediction and estimation of the causal effect of sodium on blood pressure. In particular, it compares:
+The code explores several causal inference concepts through simple synthetic examples, including:
+
+- regression adjustment and causal effect estimation
+- confounding and post-treatment conditioning
+- propensity scores and inverse probability weighting
+- unobserved confounding and sensitivity analysis
+- comparison of assumed vs. true latent-confounding structures
+
+The original sodium/blood-pressure example compares:
 
 - `Y ~ S`
 - `Y ~ S + A`
 - `Y ~ S + A + P`
 
-and visualizes the fitted models, estimated ATEs, the underlying causal graph, confounding through age, and the effect of conditioning on a post-treatment collider.
+and visualizes the underlying causal graph, estimated ATEs, confounding through age, and conditioning on a post-treatment collider.
+
+Additional experiments illustrate how hidden confounders can bias causal effect estimates and how sensitivity contours can be used to reason about the possible true ATE under different assumptions about unobserved confounding.
 
 ## Credit
 
-The original example and data-generating setup are adapted from Brady Neal's causal inference course and accompanying code.
+The original examples and data-generating setups are adapted from Brady Neal's causal inference course and accompanying code.
 
 - **Author:** Brady Neal — [@bradyneal](https://github.com/bradyneal)
 - **Original code:** [bradyneal/causal-book-code](https://github.com/bradyneal/causal-book-code)
 - **Course:** [Introduction to Causal Inference](https://www.bradyneal.com/causal-inference-course)
 
-This repository is intended as a small educational extension of the original example, mainly adding visualizations and comparisons to make regression adjustment and causal conditioning more intuitive.
+This repository is intended as a small educational extension of the original material, mainly adding visualizations and experiments to make causal adjustment, estimation, and sensitivity analysis more intuitive.
