@@ -32,7 +32,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 # Configuration
 # ============================================================
 
-PLOT_DIR = Path("plots")
+PLOT_DIR = Path("plots/sodium")
 PLOT_DIR.mkdir(exist_ok=True)
 
 TRUE_EFFECT = 1.05
